@@ -22,8 +22,7 @@ jobs:
         run: |
           test -f index.html
           mkdir -p public
-          cp -R . public/
-          rm -rf public/.git public/.github
+          cp index.html manifest.webmanifest sw.js public/
           touch public/.nojekyll
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
